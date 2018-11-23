@@ -3,7 +3,7 @@ var app = express();
 var contacts = require("./UserData.js");
 var contactsDb = require("./CustomerData.js");
 
-const PORT = process.env.PORT||'8080';
+const PORT = process.env.PORT;
 
 app.get("/API/contact", function (req, res) {
     res.setHeader('Content-Type', 'application/json');
