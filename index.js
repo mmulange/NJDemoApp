@@ -3,7 +3,8 @@ var app = express();
 var contacts = require("./UserData.js");
 var contactsDb = require("./CustomerData.js");
 
-var PORT = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
+
 
 app.get("/API/contact", function (req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -17,7 +18,7 @@ app.get("/API/contactDb", function (req, res) {
 
 app.set('json spaces', 40);
 
-var server = app.listen(PORT, function () {
+var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
 
