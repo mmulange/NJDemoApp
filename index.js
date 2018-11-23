@@ -3,7 +3,7 @@ var app = express();
 var contacts = require("./UserData.js");
 var contactsDb = require("./CustomerData.js");
 
-const PORT = process.env.PORT;
+var PORT = process.env.PORT || 8080;
 
 app.get("/API/contact", function (req, res) {
     res.setHeader('Content-Type', 'application/json');
@@ -24,4 +24,3 @@ var server = app.listen(PORT, function () {
     console.log("Example app listening at http://%s:%s", host, port);
 
 })
-
