@@ -5,6 +5,8 @@ var contactsDb = require("./CustomerData.js");
 
 var port = process.env.PORT || 8000;
 
+console.log("Hi");
+
 
 app.get("/API/contact", function (req, res) {
     res.setHeader('Content-Type', 'application/json');
